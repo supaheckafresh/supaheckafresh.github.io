@@ -1,0 +1,24 @@
+{
+  "name": "supaheckafresh.github.io",
+  "version": "0.0.1",
+  "homepage": "http://supaheckafresh.github.io",
+  "authors": [
+    "supaheckafresh <neilstrain@gmail.com>"
+  ],
+  "main": "index.html",
+  "description": "Neil Strain Developer Portfolio",
+  "license": "MIT",
+  "private": "true",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "polymer": "~1.1.2"
+  }
+}
