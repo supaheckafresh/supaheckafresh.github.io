@@ -26,8 +26,9 @@ video {
 }
 
 h1 {
+    /* using css shorthand on this font mysteriously screws up margin */
     font-family: "Titillium Web", sans-serif;
-    font-size: 60px;
+    font-size: 44px;
     font-weight: 900;
     color: #01579b;
     margin: 0;
@@ -66,12 +67,6 @@ hr {
     word-spacing: 99999999px;
 }
 
-@media screen and (min-width: 550px) {
-    .header {
-        word-spacing: 10px;
-    }
-}
-
 .logo-name {
     display: flex;
     z-index: 100000;
@@ -84,9 +79,7 @@ hr {
     margin: auto 0 0;
 }
 
-.stamp-sm, 
-.stamp-md, 
-.stamp-lg {
+.stamp {
     position: absolute;
     top: 0;
     right: 0;
@@ -112,25 +105,9 @@ hr {
     border-radius: 08px;
 }
 
-@media screen and (max-width: 991px) {
-    .portfolio-lg {
-        display: none;
-    }
-}
-
 .portfolio-lg {
     background-color: #01579b;
     border-radius: 08px;
-}
-
-@media screen and (min-width: 992px) {
-    .portfolio-sm-md {
-        display: none;
-    }
-
-    .portfolio-lg {
-        display: block;
-    }
 }
 
 .portfolio-item {
@@ -141,32 +118,6 @@ hr {
     font-variant: small-caps;
     font-weight: 400;
     margin-bottom: 0;
-}
-
-@media screen and (max-width: 991px) {
-    .app-title {
-        word-spacing: 99999999px;
-    }
-
-    .stamp-lg {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 399px) {
-    h1 {
-        font-size: 36px;
-    }
-
-    .stamp-md {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 400px) {
-    .stamp-sm {
-        display: none;
-    }
 }
 
 .app-image {
@@ -213,18 +164,15 @@ hr {
     color: #01579b;
 }
 
-@media screen and (min-width: 992px) {
-    .stamp-sm {
-        display: none;
+@media screen and (min-width: 450px) {
+    h1 {
+        font-size: 60px;
     }
+}
 
-    .stamp-md {
-        display: none;
-    }
-
-    .app-link {
-        text-align: center;
-        padding-bottom: 08px;
+@media screen and (min-width: 550px) {
+    .header {
+        word-spacing: 10px;
     }
 }
 
@@ -238,5 +186,30 @@ hr {
 @media screen and (min-width: 726px) {
     .app-description {
         display: inline-block;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .portfolio-lg {
+        display: none;
+    }
+
+    .app-title {
+        word-spacing: 99999999px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .portfolio-sm-md {
+        display: none;
+    }
+
+    .portfolio-lg {
+        display: block;
+    }
+
+    .app-link {
+        text-align: center;
+        padding-bottom: 08px;
     }
 }
